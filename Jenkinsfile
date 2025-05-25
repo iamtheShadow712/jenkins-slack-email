@@ -25,16 +25,13 @@ pipeline{
 
 
     stages{
-        stage("Check node version"){
-            steps{
-                sh "node --version"
-            }
-        }
+        
         stage("Installing Dependencies"){
             steps{
                 sh "npm install --no-audit"
             }
         }
+
         stage("Running Test Cases"){
             steps{
                 sh "npm run test"
