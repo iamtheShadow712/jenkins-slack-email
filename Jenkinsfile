@@ -12,7 +12,7 @@ pipeline{
                 sh "node --version"
             }
         }
-        stage("Running Test"){
+        stage("Running Test Cases"){
             steps{
                 sh "npm run test"
             }
