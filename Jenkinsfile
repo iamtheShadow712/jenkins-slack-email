@@ -32,6 +32,12 @@ pipeline{
             }
         }
 
+        stage("Audit NPM"){
+            steps{
+                sh "npm audit --audit-level=high"
+            }
+        }
+
         stage("Running Test Cases"){
             steps{
                 sh "npm run test"
